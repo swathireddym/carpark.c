@@ -10,10 +10,10 @@ int currentSlotNumber = 1; // Current slot number for parking
 struct Car* parkCar(int carNumber, const char* ownerName) {
     // Create a new car node
     struct Car* newCar = (struct Car*)malloc(sizeof(struct Car));
-    newCar->slotNumber = currentSlotNumber++;
-    newCar->carNumber = carNumber;
-    strncpy(newCar->ownerName, ownerName, sizeof(newCar->ownerName));
-    newCar->next = NULL;
+    newCar->slotNumber = currentSlotNumber++; // Assign the current slot number and increment for the next car
+    newCar->carNumber = carNumber; // Assign the car number
+    strncpy(newCar->ownerName, ownerName, sizeof(newCar->ownerName)); // Copy the owner name
+    newCar->next = NULL; // Set the next pointer to NULL initially
 
     if (head == NULL) {
         // If the list is empty, set the new car as the head
@@ -27,7 +27,7 @@ struct Car* parkCar(int carNumber, const char* ownerName) {
         current->next = newCar;
     }
 
-    return newCar;
+    return newCar; // Return the newly parked car
 }
 
 // Function to remove a car
@@ -56,7 +56,7 @@ int removeCar(int slotNumber) {
         previous->next = current->next;
     }
 
-    free(current);
+    free(current); // Free the memory occupied by the removed car
     return 1; // Car removed successfully
 }
 
