@@ -1,3 +1,6 @@
+//The code defines a function removeCar that removes a car from the car park linked list based on the given slot number.
+It traverses the linked list to find the car with the specified slot number and removes it from the list. It also calculates the parking time and fee for the removed car.
+The function returns 1 if the car is successfully removed, 0 if the car park is empty, and -1 if the car is not found in the specified slot number.//
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
