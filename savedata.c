@@ -1,3 +1,14 @@
+//The code includes functions for calculating parking time and fee, saving data to a file, and loading data from a file.
+
+The calculateParkingTime function calculates the parking time in hours by taking the parked time as input and comparing it with the current time. It returns the calculated parking time.
+
+The calculateParkingFee function takes the parking time as input and calculates the parking fee by multiplying it with a predefined parking rate per hour.
+
+The saveData function saves the car park data to a specified file. It opens the file in write mode, iterates over the linked list of cars, and writes the slot number, car number, owner name, and timestamp to the file.
+
+The loadData function loads car park data from a specified file. It opens the file in read mode, reads each line, and extracts the slot number, car number, owner name, and timestamp. It then creates a new car node with the extracted data and adds it to the linked list.
+The code provides functionality for calculating parking time and fee, saving data to a file, and loading data from a file in the car park management system.//
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
